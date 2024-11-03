@@ -4,21 +4,22 @@ import {useBlog} from '../hooks/index'
 import {useParams} from 'react-router-dom'
 
 function Blog() {
+  const { id } = useParams<{ id: string }>();
+  const { loading, blog } = useBlog({ id: id || "" });
 
-  const {id} = useParams();
-  const {loading, blog} = useBlog({
-    id: id || "",
-  });
-  if(loading){
-    return <div className="flex justify-center items-center h-screen">
-      <BlogSkeleton/>
-    </div>
-}
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <BlogSkeleton />
+      </div>
+    );
+  }
+
   return (
     <div>
-      <BlogPage blog={blog} />
+      {blog ? <BlogPage blog={blog} /> : <div>No blog found</div>}
     </div>
-  )
+  );
 }
 
-export default Blog
+export default Blog;
