@@ -2,4 +2,3 @@ ndoe_module
 dist
 .env
 wrangler.toml
-config.ts
