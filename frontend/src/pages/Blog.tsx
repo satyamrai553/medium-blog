@@ -1,16 +1,23 @@
+import { BlogPage } from '../components/BlogPage';
+import BlogSkeleton from '../components/BlogSkeleton';
 import {useBlog} from '../hooks/index'
 import {useParams} from 'react-router-dom'
 
 function Blog() {
+
   const {id} = useParams();
   const {loading, blog} = useBlog({
     id: id || "",
   });
   if(loading){
-    return <div className="text-2xl flex justify-center items-center h-screen">Loading...</div>
+    return <div className="flex justify-center items-center h-screen">
+      <BlogSkeleton/>
+    </div>
 }
   return (
-    <h1>{blog.title}</h1>
+    <div>
+      <BlogPage blog={blog} />
+    </div>
   )
 }
 

@@ -12,7 +12,7 @@ function BlogCard({authorName, title, content, publishedData,id}:BlogCardProps) 
     return (
         <Link to={`/blog/${id}`}>
 
-<div className="border-b border-slate-200 p-4 w-screen max-w-screen-md">
+<div className="border-b border-slate-200 p-4 w-screen max-w-screen-md cursor-pointer">
             <div className="flex items-center">
             <div>
               <Avatar name={authorName} /> 
