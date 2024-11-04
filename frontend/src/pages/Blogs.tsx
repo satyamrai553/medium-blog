@@ -1,5 +1,4 @@
 import BlogCard from "../components/BlogCard"
-import Appbar from "../components/Appbar"
 import { useBlogs } from "../hooks"
 import BlogSkeleton from "../components/BlogSkeleton"
 function Blogs() {
@@ -14,7 +13,6 @@ function Blogs() {
     }
     return (
         <>
-        <Appbar/>
         <div className="flex justify-center">
             <div className="max-w-xl">
                 {blogs.map( blog =>

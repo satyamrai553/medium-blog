@@ -1,4 +1,3 @@
-import Appbar from "../components/Appbar"
 import { BACKEND_URL } from "../config"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
@@ -11,7 +10,6 @@ export default function Publish (){
 
     return (
         <div>
-            <Appbar/>
         <div className="flex justify-center mt-6">
             
             <div className="min-w-[500px] ">

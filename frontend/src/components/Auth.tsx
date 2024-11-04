@@ -14,17 +14,26 @@ function Auth({ type }: { type: "signup" | "signin" }) {
 
 
 
-    async  function  sendRequest(){
-      try {
-        const response = await axios.post(`${BACKEND_URL}/api/v1/user/${type === 'signup'? 'signup' : "signin"}`, postInputs);
-        const jwt = response.data;
-        
-        localStorage.setItem("Authtoken", jwt.jwt)
-        navigate("/blogs")
-      } catch (error) {
-        alert("Error sending request")
+    async function sendRequest() {
+        try {
+          const response = await axios.post(
+            `${BACKEND_URL}/api/v1/user/${type === 'signup' ? 'signup' : 'signin'}`, 
+            postInputs
+          );
+      
+          const { jwt, name } = response.data; // Assuming the response includes 'jwt' and 'name'
+      
+          
+          localStorage.setItem("Authtoken", jwt);
+          localStorage.setItem("userName", name);
+      
+         
+          navigate("/blogs");
+        } catch (error) {
+          alert("Error sending request");
+        }
       }
-    }
+      
 
     return (
         <div className="flex justify-center items-center h-screen">

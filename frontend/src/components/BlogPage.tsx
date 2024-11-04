@@ -1,10 +1,9 @@
-import Appbar from "./Appbar"
+
 import {Blog} from "../hooks"
 
 export function BlogPage({blog}: {blog: Blog}){
     return(
         <div>
-            <Appbar/>
             <div className="flex justify-center">
             <div className="grid grid-cols-12 px-10 w-full pt-10 max-w-screen-xl">
             <div className="col-span-8 pr-6">
