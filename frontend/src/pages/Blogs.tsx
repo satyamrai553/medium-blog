@@ -9,6 +9,10 @@ function Blogs() {
             <BlogSkeleton/>
             <BlogSkeleton/>
             <BlogSkeleton/>
+            <BlogSkeleton/>
+            <BlogSkeleton/>
+            <BlogSkeleton/>
+            
         </div>
     }
     return (
