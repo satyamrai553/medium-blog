@@ -55,7 +55,7 @@ function Auth({ type }: { type: "signup" | "signin" }) {
                             name: e.target.value
                         })
                     }} /> : null }
-                    <LabeledInput label="Username" placeholder='satyamrai' onChange={(e) => {
+                    <LabeledInput label="email" placeholder='satyamrai@gamil.com' onChange={(e) => {
                         setPostInputs({
                             ...postInputs,
                             email: e.target.value
