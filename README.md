@@ -13,7 +13,7 @@ This is a Medium-like blogging application built with React, Tailwind CSS, and a
 ## Tech Stack
 
 - **Frontend**: React, React Router, Tailwind CSS
-- **Backend**: Node.js, Express.js, and MongoDB
+- **Backend**: Node.js, Hono, Postgres, and Prisma
 - **Authentication**: JWT (JSON Web Token)
 
 ## Installation
@@ -23,8 +23,8 @@ Follow these steps to set up and run the project locally:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/medium-blog-clone.git
-cd medium-blog-clone
+git clone https://github.com/satyamrai553/medium-blog.git
+cd medium-blog
 ```
 
 ### 2. Install Dependencies
@@ -35,11 +35,6 @@ Navigate to the root of your project and install the dependencies:
 npm install
 ```
 
-For the backend API package:
-
-```bash
-npm install satyamrai553medium-blog
-```
 
 ### 3. Environment Configuration
 
@@ -49,7 +44,6 @@ Create a `.env` file in the root of your project to set up your environment vari
 
 ```env
 DATABASE_URL=mongodb://localhost:27017/your-database-name
-JWT_SECRET=your_jwt_secret_key
 ```
 
 #### `wrangler.toml` Configuration (for Cloudflare Workers)
@@ -67,21 +61,6 @@ JWT_SECRET = "your_jwt_secret_key"
 To start both frontend and backend servers, run:
 
 ```bash
-npm start
+npm run dev
 ```
 
-The app will be available at `http://localhost:3000`.
-
-## Usage
-
-1. Go to `http://localhost:3000` in your browser.
-2. Sign up or log in to access the platform.
-3. Explore, write, and publish blogs.
-
-### Contributing
-
-Feel free to fork this repository, create a new branch for any feature or bug fix, and submit a pull request!
-
-### License
-
-This project is open-source and available under the [MIT License](LICENSE).
